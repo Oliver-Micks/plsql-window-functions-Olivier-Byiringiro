@@ -152,7 +152,7 @@ Focus marketing on expanding dairy product reach in Eastern and Western province
 
 10. Rwanda Dairy Roadmap. (2022). *The Challenges and Prospects of Rwanda Dairy Roadmap: Inyange Industries Analysis*. [Link](https://www.cabidigitallibrary.org/doi/pdf/10.5555/20143268760)
 
-==================================================================================================================
+==================================================================
 
 ## **Integrity Statement:**  
 “All sources were properly cited. Implementations and analysis represent original work. No AIgenerated content was copied without attribution or adaptation.”
