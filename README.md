@@ -1,13 +1,12 @@
 # PL/SQL Window Functions Assignment
 
 **Student:** Byiringiro Olivier  27119
-
 **Course:** Database Development with PL/SQL (INSY 8311)  
 **Instructor:** Eric Maniraguha 
 **Date:** 2025-09-23  
 
 =====================================================================
-## <span style="color:blue">1. Problem Definition</span>
+## 🎯 1. Problem Definition
 **Business Context:**  
 Inyange milk supply company sells milk and dairy products across Rwanda. The company wants to understand which products sell best, how customers purchase over time, and which regions generate the most revenue.
 
@@ -27,7 +26,7 @@ Management wants to:
 
 =======================================================================
 
-## 2. Success Criteria
+## 📈 2. Success Criteria
 1. Top 5 products per region/quarter → `RANK()`  
 2. Running monthly sales totals → `SUM() OVER()`  
 3. Month-over-month growth → `LAG()/LEAD()`  
@@ -36,7 +35,7 @@ Management wants to:
 
 =======================================================================
 
-## 3. Database Schema
+## 📈 3. Database Schema
 **Tables:**  
 
 I designed 3 tables: `Customers`, `Products`, and `Transactions`.
@@ -55,19 +54,22 @@ I also inserted sample records into all three tables.
 
 **Screenshots:** See `/screenshots/data_insertion/`
 
-**ER Diagram Placeholder:** `![ER Diagram](screenshots/er_diagram/er_diagram2.png)`  
+**ER Diagram Placeholder:** ![ER Diagram](screenshots/er_diagram/er_diagram2.png)
 
-===========================================================================
-## 4. Window Functions
+=======================================================================
+## 📈 4. Window Functions
 
-- **Ranking Function:** I ranked the Top N Customers by Total Revenue and calculated total revenue per customer and ranked them as well.
+### **Ranking Function:** 
+I ranked the Top N Customers by Total Revenue and calculated total revenue per customer and ranked them as well.
 ![Ranking function results](screenshots/queries/Ranking_function_query_output.png)
 **Interpretation:**
 The top customers by total revenue are identified. ROW_NUMBER() uniquely numbers customers, RANK() shows positions with gaps for ties, DENSE_RANK() avoids gaps, and PERCENT_RANK() shows each customer’s relative position in the dataset.
 
-- **Aggregate Function:** Running total of sales amount per customer by date
+### **Aggregate Function:** 
+Running total of sales amount per customer by date
 ![Aggregate function results](screenshots/queries/Aggregate_function_output.png)
 **Interpretation:** 
+
 -running_total: Shows cumulative spending per customer over time.
 
 -avg_recent_two_sales: Smooths out fluctuations by averaging current + previous sales.
@@ -78,19 +80,23 @@ The top customers by total revenue are identified. ROW_NUMBER() uniquely numbers
 
 -This gives a clear picture of customer purchase behavior and trends in one view.
 
-- **Navigation Function:** 
+### **Navigation Function:** 
+#### LAG()
 ![Navigation (lag) function results](screenshots/queries/Navigation_function1_output.png)
 **Interpretation:** 
+
 -Shows the current sale and the previous sale for each customer.
 
 -Helps see if spending is increasing or decreasing compared to last purchase.
+#### LEAD()
 ![Navigation (lead) function results](screenshots/queries/Navigation_function2_output.png)
 **Interpretation:** 
 -Shows current sale and the next sale for each customer.
 
 -Useful to predict trends and see what customers buy next.
 
-- **Distribution Function:** 
+### **Distribution Function:** 
+#### NTILE()
 ![Distribution (NTILE) function results](screenshots/queries/Distribution_function1_output.png)
 **Interpretation:** 
 -Divides customers into 4 groups based on spending.
@@ -98,6 +104,7 @@ The top customers by total revenue are identified. ROW_NUMBER() uniquely numbers
 -Quartile 1 = top spenders, Quartile 4 = lowest spenders.
 
 -Helps target marketing or loyalty programs.
+#### CUME_DIST()
 ![Distribution (CUME_DIST) function results](screenshots/queries/Distribution_function2_output.png)
 **Interpretation:** 
 -The highest-spending customer has the lowest CUME_DIST() value close to 0.
@@ -107,7 +114,7 @@ The top customers by total revenue are identified. ROW_NUMBER() uniquely numbers
 -Useful for identifying top-performing customers relative to all others.
 ==========================================================================
 
-## 5. Results Analysis
+## 📈 5. Results Analysis
 
 ### Descriptive Analysis
 Inyange Milk is the top-performing product across all regions, generating the highest revenue. Sales show consistent growth from January to March 2024. Kigali region contributes the most to overall sales, while dairy products outperform beverages and water categories.
@@ -120,7 +127,7 @@ Focus marketing on expanding dairy product reach in Eastern and Western province
 
 ==============================================================================
 
-## References
+## 📚 References
 
 1. Oracle Corporation. (2023). *Oracle Database SQL Language Reference - Analytic Functions*. [Link](https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/Analytic-Functions.html)
 
@@ -144,6 +151,6 @@ Focus marketing on expanding dairy product reach in Eastern and Western province
 
 ==================================================================================================================
 
-**Integrity Statement:**  
+## **Integrity Statement:**  
 “All sources were properly cited. Implementations and analysis represent original work. No AIgenerated content was copied without attribution or adaptation.”
 
