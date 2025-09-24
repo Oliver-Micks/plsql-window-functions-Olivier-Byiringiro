@@ -1,12 +1,13 @@
 # PL/SQL Window Functions Assignment
 
 **Student:** Byiringiro Olivier  27119
+
 **Course:** Database Development with PL/SQL (INSY 8311)  
 **Instructor:** Eric Maniraguha 
 **Date:** 2025-09-23  
 
 =====================================================================
-## 1. Problem Definition
+## <span style="color:blue">1. Problem Definition</span>
 **Business Context:**  
 Inyange milk supply company sells milk and dairy products across Rwanda. The company wants to understand which products sell best, how customers purchase over time, and which regions generate the most revenue.
 
