@@ -1,8 +1,11 @@
 # PL/SQL Window Functions Assignment
 
 **Student:** Byiringiro Olivier  27119
-   **Course:** Database Development with PL/SQL (INSY 8311)  
+
+**Course:** Database Development with PL/SQL (INSY 8311)  
+
 **Instructor:** Eric Maniraguha 
+
 **Date:** 2025-09-23  
 
 =====================================================================
@@ -110,6 +113,7 @@ Running total of sales amount per customer by date
 -The highest-spending customer has the lowest CUME_DIST() value close to 0.
 
 -Customers with smaller revenue have values closer to 1.
+
 -Useful for identifying top-performing customers relative to all others.
 
 =====================================================================
@@ -125,7 +129,7 @@ Dairy products like milk and yogurt drive revenue due to higher demand and prici
 ### Prescriptive Analysis
 Focus marketing on expanding dairy product reach in Eastern and Western provinces. Increase promotional activities for lower-performing categories like water. Use monthly trend data to optimize inventory planning and regional allocation.
 
-=====================================================================
+==========================================================
 ## 📚 References
 
 1. Oracle Corporation. (2023). *Oracle Database SQL Language Reference - Analytic Functions*. [Link](https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/Analytic-Functions.html)
