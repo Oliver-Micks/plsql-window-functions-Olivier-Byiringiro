@@ -9,9 +9,12 @@
 **Date:** 2025-09-23  
 
 =====================================================================
+
 ## 🎯 1. Problem Definition
 **Business Context:**  
-Inyange milk supply company sells milk and dairy products across Rwanda. The company wants to understand which products sell best, how customers purchase over time, and which regions generate the most revenue.
+- Company Type: Inyange Industries Ltd.
+- Department: Sales Analytics
+- Industry: Food & Beverage Manufacturing
 
 =======================================================================
 
@@ -20,16 +23,12 @@ The company collects data on customer purchases, products, and transaction amoun
 
 =======================================================================
 **Expected Outcome:**  
-Management wants to:  
-- Identify top products per region  
-- Calculate running monthly sales totals  
-- Analyze month-over-month growth  
-- Segment customers into quartiles for marketing  
-- Compute 3-month moving averages for trend analysis
+Identify top-performing products by region, track monthly sales growth, segment customers by spending behavior, and optimize inventory distribution based on regional demand patterns.
 
 =======================================================================
 
 ## 📈 2. Success Criteria
+Presented both in phase 4 below and in the screenshots, these criteria listed below were met:
 1. Top 5 products per region/quarter → `RANK()`  
 2. Running monthly sales totals → `SUM() OVER()`  
 3. Month-over-month growth → `LAG()/LEAD()`  
@@ -49,7 +48,7 @@ I designed 3 tables: `Customers`, `Products`, and `Transactions`.
 
 **Screenshots:** See `/screenshots/schema_creation/`
 
-I also inserted sample records into all three tables.
+I also inserted sample records into all three tables. (Some, generated to easy off the task :)
 
 - Customers: 10 sample customers across different regions.  
 - Products: 5–6 dairy products (e.g., Inyange Milk 500ml, Yoghurt, Butter).  
@@ -73,15 +72,7 @@ Running total of sales amount per customer by date
 ![Aggregate function results](screenshots/queries/Aggregate_function_output.png)
 **Interpretation:** 
 
--running_total: Shows cumulative spending per customer over time.
-
--avg_recent_two_sales: Smooths out fluctuations by averaging current + previous sales.
-
--min_sale_so_far: Tracks the lowest transaction per customer up to that point.
-
--max_sale_so_far: Tracks the highest transaction per customer up to that point.
-
--This gives a clear picture of customer purchase behavior and trends in one view.
+SUM() OVER() calculates running totals to show cumulative spending, while AVG(), MIN(), and MAX() track averages, lowest, and highest transactions. This reveals customer purchase patterns and spending ranges over time.
 
 ### **Navigation Function:** 
 #### LAG()
